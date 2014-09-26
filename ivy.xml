@@ -44,5 +44,10 @@
 		<!-- Hibernate -->
 		<dependency org="org.hibernate" name="hibernate-core" rev="4.3.6.Final"/>
 		<dependency org="org.hibernate" name="hibernate-entitymanager" rev="4.3.6.Final"/>
+		
+		<!-- Spring -->
+		<dependency org="org.springframework" name="spring-context" rev="4.1.0.RELEASE"/>
+		<dependency org="org.springframework" name="spring-core" rev="4.1.0.RELEASE"/>
+		
 	</dependencies>
 </ivy-module>

@@ -3,7 +3,9 @@ package com.egzaminator;
 import javax.servlet.annotation.WebServlet;
 
 import org.hibernate.Session;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import com.egzaminator.dao.UserDAOImpl;
 import com.egzaminator.entities.User;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
@@ -24,17 +26,16 @@ public class EgzaminatorUI extends UI {
 	@VaadinServletConfiguration(productionMode = false, ui = EgzaminatorUI.class)
 	public static class Servlet extends VaadinServlet {
 	}
+	
+	@Autowired
+	private UserDAOImpl userdao;
 
 	@Override
 	protected void init(VaadinRequest request) {
 		
-		 Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-	     session.beginTransaction();
-	     User user = new User();
-	     user.setInfo("costam");
-	     session.save(user);
-	     
-	     session.getTransaction().commit();
+		userdao.test();
+		
+		
 		 // VerticalLayout has v-verticallayout style
         VerticalLayout content = new VerticalLayout();
         setContent(content);
@@ -50,6 +51,17 @@ public class EgzaminatorUI extends UI {
                 Notification.show("Pushed!");
             }
         }));
+	}
+	
+	
+	// GETTERS / SETTERS
+
+	public UserDAOImpl getUserdao() {
+		return userdao;
+	}
+
+	public void setUserdao(UserDAOImpl userdao) {
+		this.userdao = userdao;
 	}
 
 }
