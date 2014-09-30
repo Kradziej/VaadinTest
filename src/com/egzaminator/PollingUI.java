@@ -2,12 +2,16 @@ package com.egzaminator;
 
 import javax.servlet.annotation.WebServlet;
 
+import org.springframework.stereotype.Component;
+
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
 
+
+@Component
 public class PollingUI extends UI {
 	
 	//@WebServlet(value = "/poll")

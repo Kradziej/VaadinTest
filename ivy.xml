@@ -48,6 +48,17 @@
 		<!-- Spring -->
 		<dependency org="org.springframework" name="spring-context" rev="4.1.0.RELEASE"/>
 		<dependency org="org.springframework" name="spring-core" rev="4.1.0.RELEASE"/>
+		<dependency org="org.springframework" name="spring-web" rev="4.1.0.RELEASE"/>
+		<dependency org="org.springframework" name="spring-orm" rev="4.1.0.RELEASE"/>
+		
+		
+		<!-- logging -->
+		<dependency org="log4j" name="log4j" rev="1.2.17"/>
+		<dependency org="commons-logging" name="commons-logging" rev="1.2"/>
+		
+		<!-- plugins -->
+		<dependency org="ru.xpoft.vaadin" name="spring-vaadin-integration" rev="3.1" />
+		
 		
 	</dependencies>
 </ivy-module>

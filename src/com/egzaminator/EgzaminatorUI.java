@@ -4,6 +4,9 @@ import javax.servlet.annotation.WebServlet;
 
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import com.egzaminator.dao.UserDAOImpl;
 import com.egzaminator.entities.User;
@@ -18,12 +21,13 @@ import com.vaadin.ui.Notification;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
+@Component
 @SuppressWarnings("serial")
 @Theme("egzaminator")
 public class EgzaminatorUI extends UI {
 
-	@WebServlet(value = "/*")
-	@VaadinServletConfiguration(productionMode = false, ui = EgzaminatorUI.class)
+	//@WebServlet(value = "/*")
+	//@VaadinServletConfiguration(productionMode = false, ui = EgzaminatorUI.class)
 	public static class Servlet extends VaadinServlet {
 	}
 	
@@ -34,8 +38,6 @@ public class EgzaminatorUI extends UI {
 	protected void init(VaadinRequest request) {
 		
 		userdao.test();
-		
-		
 		 // VerticalLayout has v-verticallayout style
         VerticalLayout content = new VerticalLayout();
         setContent(content);

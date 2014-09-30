@@ -4,9 +4,8 @@
 
 <hibernate-configuration>
     <session-factory>
-    
         <property name="hibernate.current_session_context_class">thread</property>
-
+		<property name="hibernate.connection.autocommit">false</property> 
     </session-factory>
     
     
