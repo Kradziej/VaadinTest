@@ -28,7 +28,7 @@
     <param-value>classpath:/log4j.xml</param-value>
   </context-param>
   
-	  <servlet>
+	 <servlet>
 	    <servlet-name>Test Application</servlet-name>
 	    <servlet-class>ru.xpoft.vaadin.SpringVaadinServlet</servlet-class>
 	    <init-param>
@@ -36,6 +36,7 @@
 	        <param-value>egzaminatorUI</param-value>
 	    </init-param>
 	</servlet>
+	
 
 	<!-- Bind as an ordinary VaadingServlet -->
 	<servlet-mapping>

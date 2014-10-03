@@ -1,5 +1,7 @@
 package com.egzaminator.dao;
 
+import java.io.Serializable;
+
 import javax.transaction.Transactional;
 
 import org.hibernate.Session;
@@ -7,12 +9,13 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
 import com.egzaminator.entities.User;
 
 @Repository
 //Automatically starts transaction when method calls database operation and commit when method returns successfully
 //@Transactional
-public class UserDAOImpl {
+public class UserDAOImpl implements Serializable {
 
 
 	@Autowired
@@ -26,7 +29,7 @@ public class UserDAOImpl {
 	     User user = new User();
 	     user.setInfo("costam");
 	     session.save(user);
-	     //session.getTransaction().commit();
+	     session.getTransaction().commit();
 	}
 	
 	
