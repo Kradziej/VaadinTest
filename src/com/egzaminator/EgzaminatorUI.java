@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 
 import com.egzaminator.components.HeadComp;
 import com.egzaminator.components.NavComp;
-import com.egzaminator.dao.UserDAOImpl;
-import com.egzaminator.entities.User;
+import com.egzaminator.dao.InfoDAOImpl;
+import com.egzaminator.entities.Info;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
@@ -41,17 +41,20 @@ public class EgzaminatorUI extends UI {
 	public static class Servlet extends VaadinServlet {
 	}
 	
-	//@Autowired
-	private UserDAOImpl userdao;
+	@Autowired
+	private InfoDAOImpl infoDao;
 	private NavComp nav;
+	
+	@Autowired
+	private HeadComp head;
 
 	@Override
 	protected void init(VaadinRequest request) {
 		
-		//userdao.test();
+		infoDao.test();
 		// VerticalLayout has v-verticallayout style
 		//AbsoluteLayout content = new AbsoluteLayout();
-		setContent(new HeadComp());
+		setContent(head);
 		
 		/*
 		 * GridLayout content = new GridLayout(2, 4);
@@ -85,12 +88,22 @@ public class EgzaminatorUI extends UI {
 	
 	// GETTERS / SETTERS
 
-	public UserDAOImpl getUserdao() {
-		return userdao;
+	public InfoDAOImpl getUserdao() {
+		return infoDao;
 	}
 
-	public void setUserdao(UserDAOImpl userdao) {
-		this.userdao = userdao;
+	public void setUserdao(InfoDAOImpl userdao) {
+		this.infoDao = userdao;
+	}
+
+
+	public HeadComp getHead() {
+		return head;
+	}
+
+
+	public void setHead(HeadComp head) {
+		this.head = head;
 	}
 
 }

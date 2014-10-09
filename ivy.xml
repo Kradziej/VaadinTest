@@ -51,6 +51,11 @@
 		<dependency org="org.springframework" name="spring-web" rev="4.1.0.RELEASE"/>
 		<dependency org="org.springframework" name="spring-orm" rev="4.1.0.RELEASE"/>
 		
+		<!-- Spring security -->
+		<dependency org="org.springframework.security" name="spring-security-acl" rev="3.2.5.RELEASE"/>
+		<dependency org="org.springframework.security" name="spring-security-core" rev="3.2.5.RELEASE"/>
+		<dependency org="org.springframework.security" name="spring-security-config" rev="3.2.5.RELEASE"/>
+		<dependency org="org.springframework.security" name="spring-security-web" rev="3.2.5.RELEASE"/>
 		
 		<!-- logging -->
 		<dependency org="log4j" name="log4j" rev="1.2.17"/>

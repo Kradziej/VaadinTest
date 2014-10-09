@@ -4,7 +4,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
-import com.egzaminator.entities.User;
+import com.egzaminator.entities.Info;
 
 public class HibernateUtil {
 
@@ -15,7 +15,7 @@ public class HibernateUtil {
             // Create the SessionFactory from hibernate.cfg.xml
         	Configuration conf = new Configuration();
         	//conf.addPackage("com.egzaminator.entities");
-        	conf.addAnnotatedClass(User.class);
+        	conf.addAnnotatedClass(Info.class);
            return conf.configure().buildSessionFactory(
 			    new StandardServiceRegistryBuilder().build() );
         }
