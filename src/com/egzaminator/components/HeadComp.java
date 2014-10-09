@@ -57,12 +57,12 @@ public class HeadComp extends CustomComponent {
 		// common part: create layout
 		mainLayout = new AbsoluteLayout();
 		mainLayout.setImmediate(false);
-		mainLayout.setWidth("821px");
-		mainLayout.setHeight("319px");
+		mainLayout.setWidth("100%");
+		mainLayout.setHeight("100%");
 		
 		// top-level component properties
-		setWidth("821px");
-		setHeight("319px");
+		setWidth("100.0%");
+		setHeight("100.0%");
 		
 		// leftPanelComp_1
 		leftPanelComp_1 = new LeftPanelComp();
@@ -74,8 +74,8 @@ public class HeadComp extends CustomComponent {
 		// navComp_2
 		navComp_2 = new NavComp();
 		navComp_2.setImmediate(false);
-		navComp_2.setWidth("700px");
-		navComp_2.setHeight("130px");
+		navComp_2.setWidth("1000px");
+		navComp_2.setHeight("92px");
 		mainLayout.addComponent(navComp_2, "top:40.0px;left:110.0px;");
 		
 		return mainLayout;
