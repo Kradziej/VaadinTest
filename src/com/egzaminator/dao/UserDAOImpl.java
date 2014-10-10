@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.egzaminator.entities.User;
 
 @Repository
-public class UserDAOImpl implements Serializable {
+public class UserDAOImpl implements UserDAO, Serializable {
 
 	
 	@PersistenceContext
