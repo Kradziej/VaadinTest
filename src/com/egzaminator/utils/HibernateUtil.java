@@ -1,4 +1,4 @@
-package com.egzaminator;
+package com.egzaminator.utils;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;

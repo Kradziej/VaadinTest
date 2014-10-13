@@ -11,14 +11,14 @@
 
 	<sec:http auto-config="true" use-expressions="true">
 		<sec:intercept-url pattern="/VAADIN/**" access="permitAll" />
-		<sec:intercept-url pattern="/main/**" access="hasRole('ROLE_ADMIN')" />
+		<sec:intercept-url pattern="/test/**" access="hasRole('ROLE_ADMIN')" />
 
 		<sec:session-management>
 			<sec:concurrency-control max-sessions="1" />
 		</sec:session-management>
 	</sec:http>
 
-	<sec:authentication-manager>
+	<sec:authentication-manager alias="authManager">
 		<sec:authentication-provider>
 			<!-- <sec:password-encoder hash="sha" /> add salt or maybe implement own 
 				PasswordEncoder -->
